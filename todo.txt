@@ -1,0 +1,15 @@
+CRUD todo items
+Group todo items into projects
+assign different tasks to different contexts
+Tag todo items
+filter based on tags
+scheduled tasks
+repeating tasks
+view by date
+
+Subject
+Due date/time
+Tags
+Notes
+
+Seach by date/subject/tags
