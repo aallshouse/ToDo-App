@@ -7,9 +7,17 @@ scheduled tasks
 repeating tasks
 view by date
 
+Task fields:
 Subject
 Due date/time
 Tags
 Notes
 
 Seach by date/subject/tags
+
+--other ideas--
+SMS/Email alert (Twilio)
+web notifications
+syndication
+oAuth
+
