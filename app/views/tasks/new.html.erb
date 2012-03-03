@@ -1,9 +1,22 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
   <head>
   </head>
   <body>
     <%= simple_form_for @task do |f| %>
       <%= f.input :title, :required => true %>
+=======
+<html>
+  <head>
+
+  </head>
+  <body>
+    <%= simple_form_for @task, :html => { :class => 'form-vertical' } do |f| %>
+      <%= f.input :title, :required => true %>
+      <div class="controls">
+        <%= f.button :submit, :class => 'btn-primary' %>
+      </div>
+>>>>>>> 9cc6f5aa332107233855e930641ef95b4a75458c
     <% end %>
   </body>
 </html>
