@@ -4,7 +4,14 @@ describe TasksController do
   describe "GET new" do
     it "has a 200 status code" do
       get :new
-      response.code.should eq("200")
+      response.code.should eq('200')
+    end
+  end
+
+  describe "GET index" do
+    it "has a 200 status code" do
+      get :index
+      response.code.should eq('200')
     end
   end
   
