@@ -4,7 +4,6 @@ describe TasksController do
   describe "GET new" do
     it "has a 200 status code" do
       get :new
-<<<<<<< HEAD
       response.code.should eq('200')
     end
   end
@@ -13,8 +12,6 @@ describe TasksController do
     it "has a 200 status code" do
       get :index
       response.code.should eq('200')
-=======
-      response.code.should eq("200")
     end
   end
   
@@ -29,7 +26,6 @@ describe TasksController do
       Task.stub(:new) {task}
       post :create, :task => {:title => 'The title' }
       response.should redirect_to(task_path(task))
->>>>>>> b5e29b6ec6db0da595b6cf2f87ebbea412489f98
     end
   end
 end
