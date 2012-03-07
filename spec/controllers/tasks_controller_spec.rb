@@ -15,8 +15,10 @@ describe TasksController do
     end
 
     it "redirects to the show action" do
+      task = mock_model(Task,:attributes => true, :save => true)
+      Task.stub(:new) {task}
       post :create, :task => {:title => 'The title' }
-      response.should redirect_to(task_path)
+      response.should redirect_to(task_path(task))
     end
   end
 end
