@@ -1,5 +1,7 @@
 require 'spec_helper'
 
 describe Task do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "add two number" do
+    subject.add(1,1).should_be 2
+  end
 end
