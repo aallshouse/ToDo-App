@@ -16,12 +16,19 @@ describe TasksController do
   end
   
   describe "POST create" do
-    it "creates a new task" do
+    it "populates the attributes of the new task" do
       post :create, :task => {:title => 'The title' }
       assigns[:task].title.should == 'The title'
     end
 
-    it "redirects to the show action" do
+    it "saves the new task" do
+      task = mock_model(Task,:attributes => true, :save => true)
+      Task.stub(:new) {task}
+      task.should_receive(:save)
+      post :create, :task => {:title => 'The title' }
+    end
+
+    it "redirects to the show action if successful" do
       task = mock_model(Task,:attributes => true, :save => true)
       Task.stub(:new) {task}
       post :create, :task => {:title => 'The title' }
