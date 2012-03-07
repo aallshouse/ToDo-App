@@ -7,4 +7,16 @@ describe TasksController do
       response.code.should eq("200")
     end
   end
+  
+  describe "POST create" do
+    it "creates a new task" do
+      post :create, :task => {:title => 'The title' }
+      assigns[:task].title.should == 'The title'
+    end
+
+    it "redirects to the show action" do
+      post :create, :task => {:title => 'The title' }
+      response.should redirect_to(task_path)
+    end
+  end
 end
